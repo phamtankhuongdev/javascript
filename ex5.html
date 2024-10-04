@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1 {
+                font-size: 36px;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="a1">w3resource</h1>
+        <script>
+            function rotateString() {
+                const element = document.getElementById("a1");
+                let text = element.innerHTML;
+                let c = text.charAt(text.length - 1);
+                text = c + text.slice(0, text.length - 1);
+                element.innerHTML = text;
+            }
+
+            window.addEventListener("load", function () {
+                setInterval(rotateString, 1000);
+            });
+        </script>
+    </body>
+</html>

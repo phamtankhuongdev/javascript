@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form name="myform" method="get">
+            1st Number:&ensp;<input type="number" name="a"><br><br>
+            2nd Number: <input type="number" name="b"><br><br>
+            <input type="button" value="Multiple" onclick="document.forms['myform'].submit()">
+            <input type="button" value="Divide" onclick="document.forms['myform'].submit()">
+            <p id="result"></p>
+        </form>
+        <script>
+            function multiple()
+            {
+                var a = document.forms["myform"]["a"].value;
+                var b = document.forms["myform"]["b"].value;
+                if( a >= 0 && b>=0)
+                  document.getElementById("result").innerHTML="The Result Is :\n"+(a*b);
+            }
+            function divide()
+            {
+                var a = document.forms["myform"]["a"].value;
+                var b = document.forms["myform"]["b"].value;                
+                if(a >= 0 && b>0)
+                 document.getElementById("result").innerHTML="The Result Is :\n"+(a/b);
+            }
+            const nodelist = document.querySelectorAll("input");
+            for (let i = 0; i < nodelist.length; i++) {
+                if (nodelist[i].value == "Multiple") {
+                    nodelist[i].addEventListener("click",multiple());
+                }
+                if (nodelist[i].value == "Divide") {
+                    nodelist[i].addEventListener("click",divide());
+                }
+            }
+        </script>
+    </body>
+</html>

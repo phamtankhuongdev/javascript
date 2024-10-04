@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1
+            {
+                color: red;
+                font-size: 30px;
+            }
+            hr
+            {
+                border-top: 4px solid magenta;
+            }
+            button
+            {
+                color:aqua;
+                font-size: 20px;
+                background-color: darkviolet;
+                border-radius: 8px;
+                border-style: none;
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Window.print() demonstration</h1>
+        <script>
+            function printpage() {
+               window.print(); 
+            }
+        </script>
+        <hr>
+        <p>Click print button below</p>
+        <button type="button" onclick="printpage()">Print</button>
+    </body>
+</html>
