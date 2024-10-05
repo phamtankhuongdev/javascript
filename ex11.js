@@ -1,5 +1,5 @@
-import {createInterface} from 'node:readline';
-import {stdin as input, stdout as output} from 'node:process';
+import { createInterface } from 'node:readline';
+import { stdin as input, stdout as output } from 'node:process';
  const rl = createInterface({input, output});
  rl.question('nhap nhiet do theo do C:',(a)=>{
     var f = (9/5)*a + 32;
