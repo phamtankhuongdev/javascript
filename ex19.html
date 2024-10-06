@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            var a = window.prompt("Enter a random number");
+            function checkRangeNumber(params) 
+            {
+              if (params < 20) {
+                  return false;
+              }
+              if (params <= 100)
+              {
+                  return true;
+              }
+              if (params <= 200) {
+                  return true;
+              }
+              return false;
+            }
+            console.log(checkRangeNumber(a));
+        </script>
+    </body>
+</html>
